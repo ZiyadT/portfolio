@@ -132,6 +132,14 @@ function App() {
           </div>
           <div>
             <div className="flex" onMouseLeave={() => setFocus(null)}>
+              <a href="https://github.com/ZiyadT/Tendie" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("tendie")} className="text-3xl font-bold my-3 p-5 w-full text-center border-transparent rounded-xl tendie w-fit text-white sm:w-1/3 sm:text-center">
+                Tendie.
+              </a>
+              <div className={"my-auto mx-10 border-r border-t border-b border-8 tendie-info rounded-xl p-2 w-7/12 " + (focus == "tendie" ? "" : "hidden")}>
+                Web app that displays historical and current stock data for any U.S security as well as recent news articles on the selected company. Pulls stock data from TwelveData and news data from NewsAPI.
+              </div>
+            </div>
+            <div className="flex" onMouseLeave={() => setFocus(null)}>
               <a href="https://github.com/ZiyadT/WeatherWatch" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("weather")} className="text-3xl font-bold my-3 p-5 w-full text-center border-transparent rounded-xl weather w-fit text-white sm:w-1/3 sm:text-center">
                 WeatherWatch
               </a>
@@ -145,14 +153,6 @@ function App() {
               </a>
               <div className={"my-auto mx-10 border-r border-t border-b border-8 workplace-info rounded-xl p-2 w-7/12 " + (focus == "workplace" ? "" : "hidden")}>
                 Simple CRUD application for managing departments and employees within a workplace.
-              </div>
-            </div>
-            <div className="flex" onMouseLeave={() => setFocus(null)}>
-              <a href="https://github.com/ZiyadT/Tendie" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("tendie")} className="text-3xl font-bold my-3 p-5 w-full text-center border-transparent rounded-xl tendie w-fit text-white sm:w-1/3 sm:text-center">
-                Tendie.
-              </a>
-              <div className={"my-auto mx-10 border-r border-t border-b border-8 tendie-info rounded-xl p-2 w-7/12 " + (focus == "tendie" ? "" : "hidden")}>
-                Web app that displays historical and current stock data for any U.S security as well as recent news articles on the selected company. Pulls stock data from TwelveData and news data from NewsAPI.
               </div>
             </div>
           </div>
