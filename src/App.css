@@ -7,6 +7,31 @@
   pointer-events: none;
 }
 
+.weather {
+  background-color: rgba(0, 34, 85, 1);
+}
+
+.weather-info {
+  border-color:rgba(0, 34, 85, 1)
+}
+
+.workplace {
+  background: #282726;
+}
+
+.workplace-info{
+  border-color:#282726
+}
+
+.tendie {
+  background-color: #201A16;
+  color: #FFE1C6;
+}
+
+.tendie-info {
+  border-color: #201A16;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

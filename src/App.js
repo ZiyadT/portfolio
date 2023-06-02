@@ -9,13 +9,13 @@ import cloud_server from './images/cloud-server.png'
 import stack from './images/stack.png'
 import robot from './images/robot.png'
 import profile from './images/ProfilePic.png'
-import p1 from './images/WeatherWatch.png'
-import p2 from './images/Workplace.png'
-import p3 from './images/UFCstats.png'
 import resume from './Resume - Ziyad Tahlilkar.pdf'
+import { useState } from "react";
 import './App.css'
 
 function App() {
+  const [focus, setFocus] = useState(null)
+
   return (
     <div>
       <main className="px-10 radial-bg md:px-20 lg:px-40">
@@ -69,7 +69,7 @@ function App() {
             for both business and consumer use.
             </p>
             <p className="text-md py-2 leading-8">
-              I offer from a wide range of services, including brand design,
+              I offer a wide range of services, including brand design,
               programming and teaching.
             </p>
           </div>
@@ -130,16 +130,31 @@ function App() {
           <div>
             <h3 className="text-3xl py-1">Projects</h3>
           </div>
-          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <a href="https://github.com/ZiyadT/WeatherWatch" target="_blank" className="basis-1/4 flex-1 transition-opacity duration-500 ease-out opacity-80 hover:opacity-100">
-              <img src={p1} className="w-full h-full"></img>
-            </a>
-            <a href="https://github.com/ZiyadT/CRUD-Workplace-Management" target="_blank" className="basis-1/4 flex-1 transition-opacity duration-500 ease-out opacity-80 hover:opacity-100">
-              <img src={p2} className="w-full h-full"></img>
-            </a>
-            <a href="https://github.com/ZiyadT/UFCstats" target="_blank" className="basis-1/4 flex-1 transition-opacity duration-500 ease-out opacity-80 hover:opacity-100">
-              <img src={p3} className="w-full h-full"></img>
-            </a>
+          <div>
+            <div className="flex" onMouseLeave={() => setFocus(null)}>
+              <a href="https://github.com/ZiyadT/WeatherWatch" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("weather")} className="text-3xl font-bold my-3 p-5 w-full text-center border-transparent rounded-xl weather w-fit text-white sm:w-1/3 sm:text-center">
+                WeatherWatch
+              </a>
+              <div className={"my-auto mx-10 border-r border-t border-b border-8 weather-info rounded-xl p-2 w-7/12 " + (focus == "weather" ? "" : "hidden")}>
+                Interactive weather app that displays weather data on any city/region or coordinate pair provided and displays them as cards on a dashboard. Pulls data from OpenWeather API.
+              </div>
+            </div>
+            <div className="flex" onMouseLeave={() => setFocus(null)}>
+              <a href="https://github.com/ZiyadT/CRUD-Workplace-Management" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("workplace")} className="text-2xl whitespace-nowrap font-bold my-3 p-5 w-full text-center border-transparent rounded-xl workplace font-cabin w-fit text-white sm:w-1/3 sm:text-center sm:text-3xl">
+                Workplace Management
+              </a>
+              <div className={"my-auto mx-10 border-r border-t border-b border-8 workplace-info rounded-xl p-2 w-7/12 " + (focus == "workplace" ? "" : "hidden")}>
+                Simple CRUD application for managing departments and employees within a workplace.
+              </div>
+            </div>
+            <div className="flex" onMouseLeave={() => setFocus(null)}>
+              <a href="https://github.com/ZiyadT/Tendie" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("tendie")} className="text-3xl font-bold my-3 p-5 w-full text-center border-transparent rounded-xl tendie w-fit text-white sm:w-1/3 sm:text-center">
+                Tendie.
+              </a>
+              <div className={"my-auto mx-10 border-r border-t border-b border-8 tendie-info rounded-xl p-2 w-7/12 " + (focus == "tendie" ? "" : "hidden")}>
+                Web app that displays historical and current stock data for any U.S security as well as recent news articles on the selected company. Pulls stock data from TwelveData and news data from NewsAPI.
+              </div>
+            </div>
           </div>
         </section>
       </main>
