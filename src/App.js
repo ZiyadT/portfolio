@@ -131,15 +131,15 @@ function App() {
             <h3 className="text-3xl py-1">Projects</h3>
           </div>
           <div>
-            <div className="flex" onMouseLeave={() => setFocus(null)}>
-              <a href="https://github.com/ZiyadT/Tendie" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("tendie")} className="text-3xl font-bold my-3 p-5 w-full text-center border-transparent rounded-xl tendie w-fit text-white sm:w-1/3 sm:text-center">
+            <div className="flex justify-between" onMouseLeave={() => setFocus(null)}>
+              <a href="http://54.173.185.222/" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("tendie")} className="text-3xl font-bold my-3 p-5 w-full text-center border-transparent rounded-xl tendie w-fit text-white sm:w-1/3 sm:text-center">
                 Tendie.
               </a>
               <div className={"my-auto mx-10 border-r border-t border-b border-8 tendie-info rounded-xl p-2 w-7/12 " + (focus == "tendie" ? "" : "hidden")}>
-                Web app that displays historical and current stock data for any U.S security as well as recent news articles on the selected company. Pulls stock data from TwelveData and news data from NewsAPI.
+                Web app that displays historical and current stock data for any U.S security as well as recent news articles on the selected company. Pulls stock data from TwelveData and news data from NewsAPI. Deployed on EC2.
               </div>
             </div>
-            <div className="flex" onMouseLeave={() => setFocus(null)}>
+            <div className="flex justify-between" onMouseLeave={() => setFocus(null)}>
               <a href="https://github.com/ZiyadT/WeatherWatch" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("weather")} className="text-3xl font-bold my-3 p-5 w-full text-center border-transparent rounded-xl weather w-fit text-white sm:w-1/3 sm:text-center">
                 WeatherWatch
               </a>
@@ -147,7 +147,7 @@ function App() {
                 Interactive weather app that displays weather data on any city/region or coordinate pair provided and displays them as cards on a dashboard. Pulls data from OpenWeather API.
               </div>
             </div>
-            <div className="flex" onMouseLeave={() => setFocus(null)}>
+            <div className="flex justify-between" onMouseLeave={() => setFocus(null)}>
               <a href="https://github.com/ZiyadT/CRUD-Workplace-Management" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("workplace")} className="text-2xl whitespace-nowrap font-bold my-3 p-5 w-full text-center border-transparent rounded-xl workplace font-cabin w-fit text-white sm:w-1/3 sm:text-center sm:text-3xl">
                 Workplace Management
               </a>
