@@ -1,7 +1,8 @@
 import {
   AiFillGithub,
   AiFillLinkedin,
-  AiOutlineMail
+  AiOutlineMail,
+  AiFillCaretRight
 } from "react-icons/ai"
 import ccp from './images/CCP.png';
 import saa from './images/SAA.png';
@@ -127,32 +128,43 @@ function App() {
           </div>
         </section>
         <section className="py-10">
-          <div>
-            <h3 className="text-3xl py-1">Projects</h3>
+          <div className="mb-8">
+            <h3 className="text-3xl">Projects</h3>
           </div>
-          <div>
-            <div className="flex justify-between" onMouseLeave={() => setFocus(null)}>
-              <a href="http://54.173.185.222/" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("tendie")} className="text-3xl font-bold my-3 p-5 w-full text-center border-transparent rounded-xl tendie w-fit text-white sm:w-1/3 sm:text-center">
-                Tendie.
-              </a>
-              <div className={"my-auto mx-10 border-r border-t border-b border-8 tendie-info rounded-xl p-2 w-7/12 " + (focus == "tendie" ? "" : "hidden")}>
-                Web app that displays historical and current stock data for any U.S security as well as recent news articles on the selected company. Pulls stock data from TwelveData and news data from NewsAPI. Deployed on EC2.
+          <div className="sm:grid sm:grid-cols-3 sm:gap-4">
+            <div className="text-center py-4 tendie p-2 rounded-md my-2" onMouseLeave={() => setFocus(null)}>
+              <div className="overlay-container">
+                <div className="proj-image">
+                  <h1 className="text-3xl font-bold p-2">Tendie.</h1>
+                    Web app that displays historical and current stock data for any U.S security as well as recent news articles on the selected company. 
+                    Pulls stock data from TwelveData and news data from NewsAPI. Deployed on EC2.
+                </div>
+                <div className="proj-text flex">
+                  <a href="https://github.com/ZiyadT/Tendie" target="_blank"><AiFillGithub className="text-6xl text-white mx-5" /></a>
+                  <a href="http://54.173.185.222/" target="_blank"><AiFillCaretRight className="text-6xl text-white mx-5" /></a>
+                </div>
               </div>
             </div>
-            <div className="flex justify-between" onMouseLeave={() => setFocus(null)}>
-              <a href="https://github.com/ZiyadT/WeatherWatch" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("weather")} className="text-3xl font-bold my-3 p-5 w-full text-center border-transparent rounded-xl weather w-fit text-white sm:w-1/3 sm:text-center">
-                WeatherWatch
-              </a>
-              <div className={"my-auto mx-10 border-r border-t border-b border-8 weather-info rounded-xl p-2 w-7/12 " + (focus == "weather" ? "" : "hidden")}>
-                Interactive weather app that displays weather data on any city/region or coordinate pair provided and displays them as cards on a dashboard. Pulls data from OpenWeather API.
+            <div className="text-center py-4 weather text-white p-2 rounded-md my-2" onMouseLeave={() => setFocus(null)}>
+              <div className="overlay-container">
+                <div className="proj-image">
+                  <h1 className="text-3xl font-bold p-2">WeatherWatch</h1>
+                    Interactive weather app that displays weather data on any city/region or coordinate pair provided and displays them as cards on a dashboard. Pulls data from OpenWeather API.
+                </div>
+                <div className="proj-text">
+                  <a href="https://github.com/ZiyadT/WeatherWatch" target="_blank"><AiFillGithub className="text-6xl text-white mx-5" /></a>
+                </div>
               </div>
             </div>
-            <div className="flex justify-between" onMouseLeave={() => setFocus(null)}>
-              <a href="https://github.com/ZiyadT/CRUD-Workplace-Management" target="_blank" onClick={() => setFocus(null)} onMouseEnter={() => setFocus("workplace")} className="text-2xl whitespace-nowrap font-bold my-3 p-5 w-full text-center border-transparent rounded-xl workplace font-cabin w-fit text-white sm:w-1/3 sm:text-center sm:text-3xl">
-                Workplace Management
-              </a>
-              <div className={"my-auto mx-10 border-r border-t border-b border-8 workplace-info rounded-xl p-2 w-7/12 " + (focus == "workplace" ? "" : "hidden")}>
-                Simple CRUD application for managing departments and employees within a workplace.
+            <div className="text-center py-4 workplace text-white font-cabin p-2 rounded-md my-2" onMouseLeave={() => setFocus(null)}>
+              <div className="overlay-container">
+                <div className="proj-image">
+                  <h1 className="text-3xl font-bold p-2">Workplace Management</h1>
+                    Simple CRUD application for managing departments and employees within a workplace.
+                </div>
+                <div className="proj-text">
+                  <a href="https://github.com/ZiyadT/CRUD-Workplace-Management" target="_blank"><AiFillGithub className="text-6xl text-white mx-5" /></a>
+                </div>
               </div>
             </div>
           </div>
